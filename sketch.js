@@ -5,10 +5,10 @@ const Constraint = Matter.Constraint;
 const Body = Matter.Body;
 const Render = Matter.Render;
 
-var plinkos1 = [];
-var plinkos2 = [];
-var plinkos3 = [];
-var plinkos4 = [];
+var plinko1 = [];
+var plinko2 = [];
+var plinko3 = [];
+var plinko4 = [];
 var particles = [];
 var divisions = [];
 var ground;
@@ -29,26 +29,26 @@ function setup() {
   //plinko
   //row 1:
   for(var j = 40; j <= width; j = j + 50){
-    plinkos1.push(new Plinko(j,75));
+    plinko1.push(new Plinko(j,75));
   }
 //row 2:  
   for(var k = 15; k <= width; k = k + 50){
-    plinkos2.push(new Plinko(k,175));
+    plinko2.push(new Plinko(k,175));
   }
 //row 3:
   for(var l = 40; l <= width; l = l + 50){
-    plinkos3.push(new Plinko(l,275));
+    plinko3.push(new Plinko(l,275));
   }
 //row 4:
   for(var m = 15; m <= width; m = m + 50){
-    plinkos4.push(new Plinko(m,375));
+    plinko4.push(new Plinko(m,375));
   }
 
   ground = new Ground(240,795,480,10);
 }
 
 function draw() {
-  background(0);
+  background("yellow");
 
   if(frameCount % 90 === 0){
     
@@ -64,22 +64,22 @@ function draw() {
     divisions[i].display();
   }
   
-  //plinkos:
+  //PLINKO:
   //row 1:
-  for(var i = 0; i < plinkos1.length; i++){
-      plinkos1[i].display();
+  for(var i = 0; i < plinko1.length; i++){
+      plinko1[i].display();
     }
   //row 2:  
-  for(var i = 0; i < plinkos2.length; i++){
-      plinkos2[i].display();
+  for(var i = 0; i < plinko2.length; i++){
+      plinko2[i].display();
     }
   //row 3:
-    for(var i = 0; i < plinkos3.length; i++){
-      plinkos3[i].display();
+    for(var i = 0; i < plinko3.length; i++){
+      plinko3[i].display();
     }
   //row 4:
-  for(var i = 0; i < plinkos4.length; i++){
-      plinkos4[i].display();
+  for(var i = 0; i < plinko4.length; i++){
+      plinko4[i].display();
     } 
 
   for (var k = 0; k < particles.length; k++){
