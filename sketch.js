@@ -50,7 +50,7 @@ function setup() {
 function draw() {
   background(0);
 
-  if(frameCount % 60 === 0){
+  if(frameCount % 90 === 0){
     
    particles.push(new Particle(random(width/2 - 25, width/2 + 25),10,10));
   }
